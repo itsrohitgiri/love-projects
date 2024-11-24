@@ -6,16 +6,19 @@
   <title>Love Page</title>
   <style>
     body {
-      background-image: url('https://i.redd.it/uwwte8wps4h91.gif');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      margin: 0;
-      padding: 0;
-      font-family: "Candara", "Oswald", sans-serif;
-      color: #fff;
-      text-align: center;
-    }
+  background-image: url('https://zbase-global.zingfront.com/saasbox/resources/gif/15-1__6561d054a3fa48eb5124cb455a2126ab.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #000; /* Fallback */
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Fix for mobile browsers */
+  }
+}
+
 
     p {
       font-size: 32px;
@@ -69,18 +72,17 @@
 
     /* Modal styles */
     #customModal {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      padding: 30px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      border-radius: 20px;
-      z-index: 1000;
-    }
+  width: 90%; /* Responsive width */
+  max-width: 400px; /* Limit max width */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #customModal {
+    padding: 10px;
+  }
+}
+
 
     #customModal h2 {
       color: #ff69b4;
