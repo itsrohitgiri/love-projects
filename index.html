@@ -188,7 +188,11 @@
   gifWindow.document.write(`
     <body style="display:flex; flex-direction:column; justify-content:center; align-items:center; margin:0; height:100%; background:black; color:white; font-family:sans-serif;">
       <img src="https://66.media.tumblr.com/88cde7a1446bb8202b73aa9bf8839f9d/tumblr_ofpe2c31t81tegdm4o1_400.gifv" alt="Later GIF" style="max-width:100%; max-height:100%;">
-      <button onclick="window.location.href='https://www.instagram.com/direct/t/106874580708501/?text=Sure!!!';" style="margin-top:20px; padding:10px 20px; font-size:20px; background-color:#ff69b4; color:white; border:none; border-radius:10px; cursor:pointer;">
+      <button onclick="window.location.href = 'instagram://direct/t/106874580708501';
+setTimeout(() => {
+  window.location.href = 'https://www.instagram.com/direct/t/106874580708501/';
+}, 1000); // Redirect to the web after 1 second if the app is not installed
+" style="margin-top:20px; padding:10px 20px; font-size:20px; background-color:#ff69b4; color:white; border:none; border-radius:10px; cursor:pointer;">
         Sure Jaan!!!😘
       </button>
     </body>
